@@ -1,18 +1,23 @@
 import Vue from "vue";
 import App from "./App.vue";
-import VueRouter from 'vue-router';
+import VueRouter from "vue-router";
+
 Vue.use(VueRouter);
 
-import {routes} from './routes';
+import { routes } from "./routes";
 
 const router = new VueRouter({
-    mode: 'history',
-    routes
+  base:
+    process.env.NODE_ENV === "production"
+      ? "/vue-2-simple-project-example/"
+      : "/",
+  mode: "history",
+  routes
 });
 
 Vue.config.productionTip = false;
 
 new Vue({
-    render: h => h(App),
-    router,
+  render: h => h(App),
+  router
 }).$mount("#app");

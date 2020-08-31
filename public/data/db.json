@@ -1,23 +1,23 @@
 [
   {
-    "id": 1,
-    "photo": "kote-abkhazi.jpg",
-    "name": "Kote Abkhazi",
-    "rank": "Major general",
-    "age_of_death": 55
+    "id": 4,
+    "photo": "dvali.jpg",
+    "name": "Giorgi Dvali",
+    "rank": "Physicist",
+    "age_of_death": null
   },
   {
-    "id": 2,
-    "photo": "robert-lee.jpg",
-    "name": "Robert E. Lee",
-    "rank": "General",
-    "age_of_death": 63
+    "id": 5,
+    "photo": "kartveli.jpg",
+    "name": "Alexander Kartveli",
+    "rank": "Aircraft engineer",
+    "age_of_death": 77
   },
   {
-    "id": 3,
-    "photo": "jan.jpg",
-    "name": "Jan Žižka",
-    "rank": "General",
-    "age_of_death": 64
+    "id": 6,
+    "photo": "nadiradze.jpg",
+    "name": "Aleksandr Nadiradze",
+    "rank": "Inventor, designer and engineer",
+    "age_of_death": 73
   }
 ]

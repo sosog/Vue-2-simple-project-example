@@ -3,7 +3,7 @@
     <img
       v-if="isString(profile.photo)"
       class="profile__photo"
-      :src="require(`./../assets/${profile.photo}`)"
+      :src="require(`./../assets/images/${profile.photo}`)"
       alt=""
     />
     <div v-if="isString(profile.name)" class="profile__name">
@@ -48,7 +48,7 @@ export default {
   &__photo {
     width: 200px;
     height: 200px;
-    border: 4px solid #24201f;
+    border: 4px solid darkgray;
     object-fit: cover;
   }
 

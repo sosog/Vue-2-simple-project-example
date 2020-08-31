@@ -26,7 +26,7 @@
             :error="errors[0]"
           />
         </ValidationProvider>
-        <BaseButton :disabled="invalid">
+        <BaseButton :disabled="invalid || isSending">
           Submit
           <template v-slot:right>
             <Arrow />
@@ -71,20 +71,19 @@ export default {
   data() {
     return {
       name: "",
-      email: ""
+      email: "",
+      isSending: false
     };
   },
   methods: {
     onSubmit() {
+      this.isSending = true;
       ContactServices.fetchContactForm().then(response => {
+        this.isSending = false;
         console.log(response);
         alert("Success message!");
       });
     },
-    resetForm(){
-      this.name = '';
-      this.email = '';
-    }
   }
 };
 </script>

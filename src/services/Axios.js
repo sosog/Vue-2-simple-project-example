@@ -1,4 +1,7 @@
 import axios from "axios";
+
 export default axios.create({
-  baseURL: process.env.BASE_URL
+    baseURL: process.env.NODE_ENV === "production"
+        ? "/vue-2-simple-project-example/"
+        : "/",
 });

@@ -1,12 +1,30 @@
 <template>
   <header class="header">
-   <nav>
-     <ul class="header__menu">
-       <li class="header__menu-item" v-for="route in $router.options.routes" :key="route.name">
-         <RouterLink router-link-exact-active class="header__menu-item-link" :to="{ name: route.name }">{{ route.meta.title }}</RouterLink>
-       </li>
-     </ul>
-   </nav>
+    <nav>
+      <ul class="header__menu">
+        <li
+          class="header__menu-item"
+          v-for="route in $router.options.routes"
+          :key="route.name"
+        >
+          <RouterLink
+            router-link-exact-active
+            class="header__menu-item-link"
+            :to="{ name: route.name }"
+            >{{ route.meta.title }}</RouterLink
+          >
+        </li>
+        <li class="header__menu-item">
+          <a
+            href="https://github.com/sosog/vue-2-simple-project-example"
+            target="_blank"
+            class="header__menu-item-link"
+          >
+            GitHub
+          </a>
+        </li>
+      </ul>
+    </nav>
   </header>
 </template>
 
@@ -17,31 +35,31 @@ export default {
 </script>
 
 <style lang="scss">
-    .header{
-        display: flex;
-        justify-content: center;
-        padding: 30px;
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 30px 30px 0;
+  width: 100%;
 
-        &__menu{
-            display: flex;
+  &__menu {
+    display: flex;
+  }
 
-        }
+  &__menu-item {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 10px;
+    list-style-type: none;
+  }
 
-        &__menu-item{
-            font-size: 16px;
-            font-weight: bold;
-            margin: 0 10px;
-            list-style-type: none;
-        }
+  &__menu-item-link {
+    color: #24201f;
+    text-decoration: none;
 
-        &__menu-item-link{
-            color: #24201f;
-
-            &.router-link-exact-active,
-            &:hover{
-                color: darkorange;
-            }
-        }
+    &.router-link-exact-active,
+    &:hover {
+      color: darkorange;
     }
-
+  }
+}
 </style>

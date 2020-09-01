@@ -1,5 +1,5 @@
 <template>
-  <div class="profiles">
+  <div v-if="profilesFetched" class="profiles">
     <ProfileItem
       v-for="profile in profiles"
       :key="profile.id"
@@ -22,10 +22,20 @@ export default {
       profiles: []
     };
   },
+  computed: {
+    profilesFetched() {
+      return Array.isArray(this.profiles) && this.profiles.length > 0;
+    }
+  },
   mounted() {
-    ProfileServices.fetchProfilesList().then(profiles => {
-      this.profiles = profiles;
-    });
+    this.fetchProfiles();
+  },
+  methods: {
+    fetchProfiles() {
+      ProfileServices.fetchProfilesList().then(profiles => {
+        this.profiles = profiles;
+      });
+    }
   }
 };
 </script>

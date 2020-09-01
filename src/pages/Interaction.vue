@@ -38,6 +38,11 @@ export default {
       maxNumber: 100
     };
   },
+  watch: {
+    maxNumber(){
+      this.generateRandomNumber();
+    }
+  },
   mounted(){
     this.generateRandomNumber();
   },

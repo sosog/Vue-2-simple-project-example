@@ -6,13 +6,15 @@ The main goal is to understand how it works in real projects not just in TODO li
 
 - reactivity
 - routes
-- components
+- components 
+- functional components 
 - props
 - slots
 - transitions
 - forms
 - inputs
 - services 
+- CSS methodologies
 and other most used examples. 
 
 ####[Demo](https://sosog.github.io/vue-2-simple-project-example/)

@@ -1,7 +1,7 @@
 <template>
-  <div v-if="profileDataFetched" class="profiles">
+  <div class="profiles">
     <ProfileItem
-      v-for="profile in profileData"
+      v-for="profile in profiles"
       :key="profile.id"
       :profile="profile"
     />
@@ -19,23 +19,13 @@ export default {
   },
   data() {
     return {
-      profileData: []
+      profiles: []
     };
   },
-  computed: {
-    profileDataFetched() {
-      return Array.isArray(this.profileData) && this.profileData.length > 0;
-    }
-  },
   mounted() {
-    this.fetchProfiles();
-  },
-  methods: {
-    fetchProfiles() {
-      ProfileServices.fetchProfilesList().then(profiles => {
-        this.profileData = profiles;
-      });
-    }
+    ProfileServices.fetchProfilesList().then(profiles => {
+      this.profiles = profiles;
+    });
   }
 };
 </script>

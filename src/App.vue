@@ -32,8 +32,9 @@ body {
   font-family: Arial, sans-serif;
   background-color: #fff;
   border: 1px solid lightgray;
-  height: calc(100vh - 70px);
+  min-height: calc(100vh - 70px);
   box-sizing: border-box;
+
 }
 
 .slide-fade-enter-active {

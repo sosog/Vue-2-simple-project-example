@@ -43,7 +43,12 @@ export default {
 .profile {
   width: 200px;
   margin-right: 30px;
+  margin-bottom: 30px;
   text-align: center;
+
+  @media screen and (max-width: 960px) {
+    margin-right: 0;
+  }
 
   &__photo {
     width: 200px;

@@ -13,7 +13,7 @@ import ProfileItem from "../components/ProfileItem";
 import ProfileServices from "../services/ProfileServices";
 
 export default {
-  name: "Profiles.vue",
+  name: "Profiles",
   components: {
     ProfileItem
   },
@@ -43,5 +43,6 @@ export default {
 <style lang="scss">
 .profiles {
   display: flex;
+  flex-wrap: wrap;
 }
 </style>

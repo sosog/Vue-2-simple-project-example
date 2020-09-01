@@ -11,8 +11,8 @@
             router-link-exact-active
             class="header__menu-item-link"
             :to="{ name: route.name }"
-            >{{ route.meta.title }}</RouterLink
-          >
+            >{{ route.meta.title }}
+          </RouterLink>
         </li>
         <li class="header__menu-item">
           <a
@@ -40,9 +40,13 @@ export default {
   justify-content: center;
   padding: 30px 30px 0;
   width: 100%;
+  box-sizing: border-box;
 
   &__menu {
     display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style-type: none;
   }
 
   &__menu-item {
@@ -50,6 +54,11 @@ export default {
     font-weight: bold;
     margin: 0 10px;
     list-style-type: none;
+    @media screen and (max-width: 960px) {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 15px;
+    }
   }
 
   &__menu-item-link {
